@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 1000px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    border: 2px solid #00ffff;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    border: 1px solid #00ffff;
+    font-size: 1.2rem;
+    color: #00ffff;
+}
+
+#gameCanvas {
+    width: 100%;
+    height: 500px;
+    background-color: #000;
+    border-radius: 5px;
+    border: 2px solid #00ffff;
+    cursor: crosshair;
+    display: block;
+}
+
+.game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #00ffff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #00cccc;
+    transform: scale(1.05);
+}
+
+.game-instructions {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    border: 1px solid #00ffff;
+}
+
+.game-instructions h2 {
+    color: #00ffff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.game-instructions p, .game-instructions ul {
+    margin-bottom: 10px;
+}
+
+.game-instructions ul {
+    padding-left: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #121212;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal h2 {
+    color: #00ffff;
+    margin-bottom: 20px;
+}
+
+.modal p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .game-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #gameCanvas {
+        height: 350px;
+    }
+    
+    .game-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+} 
